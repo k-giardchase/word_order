@@ -4,6 +4,6 @@ describe('wordSort' ,function() {
     });
 
     it("will return two unique words if user inputs two unique words", function() {
-        expect(wordSort('hello there hello apples chicken wings there apples chicken wings')).to.eql({hello: 1, there: 1});
+        expect(wordSort('hello there')).to.eql({hello: 1, there: 1});
     });
 });

@@ -13,7 +13,40 @@ var wordSort = function(input) {
         {
             new_array[word] = 1;
         }
+
+
+
     });
-    return new_array;
+
+    var sortable = [];
+    for(var word in new_array) {
+        sortable.push([word, new_array[word]]);
+        sortable.sort(function(word1,word2) {
+            return word2[1] - word1[1];
+        });
+    }
+
+    return sortable;
 
 }
+
+
+
+$(document).ready(function() {
+    $("form#wordCount").submit(function(event) {
+
+        var input = $('input#inputText').val();
+        var result = wordSort(input);
+
+        $(".count").empty();
+
+
+        $.each(result, function( key, value) {
+
+            $('.count').append("<li>"  + value + " </li>");
+        });
+
+        $('#result').show();
+        event.preventDefault();
+    });
+});
