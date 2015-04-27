@@ -1,29 +1,32 @@
 <html>
-    <head>
-        <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
-        <link rel = "stylesheet" href = "css/styles.css">
-        <script src = "js/jquery-1.11.2.js"></script>
-        <script src = "js/scripts.js"></script>
-        <title>Word Order</title>
-    </head>
-    <body>
-        <div class = "container">
-            <div class = "jumbotron"> Word Counter! </div>
-
-            <form id= "wordCount">
-                <div class ="form-group">
-                    <label for = "inputText">Input your text</label>
-                    <input id = "inputText" type = "text">
-                </div>
-                <button type = "submit" class = "btn btn-warning">Calculate!</button>
-            </form>
-
-            <div id='result'>
-                <ol class='count'>
-
-                </ol>
+  <head>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="js/jquery-1.11.2.js"></script>
+      <script src="js/scripts.js"></script>
+      <title>Word Order</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Word Counter!</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form id= "wordCount">
+            <div class ="form-group">
+              <label for = "inputText">Input your text</label>
+              <input id = "inputText" type = "text">
             </div>
+            <button type = "submit" class = "btn btn-warning">Calculate!</button>
+          </form>
         </div>
+        <div class="col-md-6" id="result">
+          <ol class="count">
 
-    </body>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
