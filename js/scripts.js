@@ -14,8 +14,6 @@ var wordSort = function(input) {
             new_array[word] = 1;
         }
 
-
-
     });
 
     var sortable = [];
